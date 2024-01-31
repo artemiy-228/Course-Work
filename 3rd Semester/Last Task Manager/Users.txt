@@ -1,0 +1,6 @@
+login: Artemy Sychev  password: 1qaz2wsx
+login: Nikita Polyantsev  password: 1qaz2wsx
+login: Timofey Schipkov  password: 1qaz2wsx
+login: Vildan Khismatullin  password: 1qaz2wsx
+login: Andrey Demidov  password: 1qaz2wsx
+login: Daniil Sychev  password: 1qaz2wsx
