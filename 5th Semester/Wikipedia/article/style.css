@@ -1,0 +1,129 @@
+:root {
+    --primary-bg-color: #131A20;
+    --open-windows-color: #252B32;
+    --input-text-color: #A8AAAD;
+
+    transition: --primary-bg-color 0.3s ease,
+    --open-windows-color 0.3s ease,
+    --input-text-color 0.3s ease;
+
+
+    --primary-text-color: #35BFA4;
+    --input-shadow-color: rgba(53, 191, 164, 0.6);
+    --button-hover-color: #288F7A;
+
+
+}
+
+/* Сброс стилей */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стили для body */
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Скрытый класс */
+.hide {
+    display: none;
+}
+
+/* Стили для header */
+header {
+    color: var(--primary-text-color);
+    display: flex;
+    padding: 8px 16px;
+    height: 50px;
+}
+
+/* Стили для текста логотипа */
+.logo-text {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    padding: 0;
+    justify-self: flex-end;
+}
+
+/* Разделение элементов внутри header */
+header > * {
+    flex: 1;
+}
+
+/* Логотип */
+header img {
+    height: 50px;
+}
+
+/* Основной контент */
+.article-body {
+    display: flex;
+    flex: 1;
+}
+
+/* Стили для логотипа */
+.logo-div {
+    display: flex;
+    align-items: center;
+}
+
+/* Поле информации */
+.info-field {
+    display: flex;
+}
+
+/* Поле ввода */
+.search-input {
+    height: 40px;
+    flex: 1;
+    padding: 10px 20px;
+    margin: 0;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--open-windows-color);
+    box-shadow: 0 0 5px var(--input-shadow-color);
+    border: none;
+    color: var(--input-text-color);
+    font-size: 16px;
+    outline: none;
+}
+
+/* Кнопки */
+.action-button {
+    height: 100%;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.action-button i {
+    font-size: 20px;
+}
+
+/* Активация кнопки */
+.action-button:active {
+    color: var(--button-hover-color);
+}
+
+/* Поле ввода с кнопками */
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 10px;
+}
+
+.input-field > button, .logo-div > button {
+    margin: 8px 0;
+}
+
