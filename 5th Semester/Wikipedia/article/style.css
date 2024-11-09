@@ -1,28 +1,25 @@
 :root {
     --primary-bg-color: #131A20;
     --open-windows-color: #252B32;
-    --input-text-color: #A8AAAD;
+    --text-color: #A8AAAD;
 
     transition: --primary-bg-color 0.3s ease,
     --open-windows-color 0.3s ease,
     --input-text-color 0.3s ease;
 
-
     --primary-text-color: #35BFA4;
-    --input-shadow-color: rgba(53, 191, 164, 0.6);
+    --shadow-color: rgba(53, 191, 164, 0.6);
     --button-hover-color: #288F7A;
-
-
+    --button-border-color: #5C85D6;
 }
 
-/* Сброс стилей */
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-/* Стили для body */
 body {
     display: flex;
     flex-direction: column;
@@ -30,12 +27,12 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Скрытый класс */
+
 .hide {
     display: none;
 }
 
-/* Стили для header */
+
 header {
     color: var(--primary-text-color);
     display: flex;
@@ -43,7 +40,7 @@ header {
     height: 50px;
 }
 
-/* Стили для текста логотипа */
+
 .logo-text {
     font-family: 'Lobster', cursive;
     margin: 0;
@@ -51,34 +48,28 @@ header {
     justify-self: flex-end;
 }
 
-/* Разделение элементов внутри header */
 header > * {
     flex: 1;
 }
 
-/* Логотип */
-header img {
-    height: 50px;
-}
 
-/* Основной контент */
 .article-body {
     display: flex;
     flex: 1;
 }
 
-/* Стили для логотипа */
+
 .logo-div {
     display: flex;
     align-items: center;
 }
 
-/* Поле информации */
+
 .info-field {
     display: flex;
 }
 
-/* Поле ввода */
+
 .search-input {
     height: 40px;
     flex: 1;
@@ -86,14 +77,14 @@ header img {
     margin: 0;
     border-radius: 15px 0 0 15px;
     background-color: var(--open-windows-color);
-    box-shadow: 0 0 5px var(--input-shadow-color);
+    box-shadow: 0 0 5px var(--shadow-color);
     border: none;
-    color: var(--input-text-color);
+    color: var(--text-color);
     font-size: 16px;
     outline: none;
 }
 
-/* Кнопки */
+
 .action-button {
     height: 100%;
     width: 50px;
@@ -110,12 +101,12 @@ header img {
     font-size: 20px;
 }
 
-/* Активация кнопки */
+
 .action-button:active {
     color: var(--button-hover-color);
 }
 
-/* Поле ввода с кнопками */
+
 .input-field {
     display: flex;
     align-items: center;
@@ -125,5 +116,83 @@ header img {
 
 .input-field > button, .logo-div > button {
     margin: 8px 0;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.dropdown-menu > button {
+    padding: 8px 16px;
+    background-color: #DD3333;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.settings-dropdown-menu {
+    gap: 20px;
+    background-color: var(--open-windows-color);
+    color: var(--text-color);
+    padding: 24px 32px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-dropdown-menu > * {
+    flex: 1;
+}
+
+.subsettings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.settings-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+}
+
+.settings-buttons > * {
+    flex: 0 1 90px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+.settings-buttons > *:hover {
+    border: 2px solid var(--button-border-color);
+}
+
+#lightButton {
+    background-color: white;
+    color: #131A21;
+}
+
+#darkButton {
+    background-color: #131A21;
+    color: var(--text-color);
+}
+
+
+#settings {
+    position: absolute;
+    top: 50px;
+    right: 16px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#settings.hide {
+    display: none;
 }
 

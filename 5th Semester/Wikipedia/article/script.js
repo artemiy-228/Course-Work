@@ -60,52 +60,68 @@ const hints = [
     "Mobile app development"
 ];
 
+const inputField = document.getElementById("inputField")
+const searchButton = document.getElementById("searchButton");
+const searchInput = document.getElementById("searchInput");
+const settingsButton = document.getElementById("settingsButton")
+const lightButton = document.getElementById("lightButton")
+const darkButton = document.getElementById("darkButton")
+const defaultButton = document.getElementById("defaultButton")
+
+
 const changeTheme = (isDark) => {
     if (isDark) {
         document.documentElement.style.setProperty('--primary-bg-color', '#131A20');
         document.documentElement.style.setProperty('--open-windows-color', '#252B32');
         document.documentElement.style.setProperty('--input-text-color', '#A8AAAD');
+        lightButton.style.border = null;
+        darkButton.style.border = "2px solid #5C85D6";
+
     } else {
         document.documentElement.style.setProperty('--open-windows-color', '#ECE5DF');
         document.documentElement.style.setProperty('--primary-bg-color', '#DAD4CD');
         document.documentElement.style.setProperty('--input-text-color', '#1F1E1D');
+        darkButton.style.border = null;
+        lightButton.style.border = "2px solid #5C85D6";
     }
 }
 
-
-
-
+changeTheme(false)
 
 
 const getHint = () => {
     return `Find an Article for example ${hints[Math.floor(Math.random() * hints.length)]}`;
 }
 
-const inputField = document.getElementById("inputField")
-const searchButton = document.getElementById("searchButton");
-const searchInput = document.getElementById("searchInput");
-const settingsButton = document.getElementById("settingsButton")
-let isOpen = false;
-let isDark = false;
-
-changeTheme(isDark)
 
 searchButton.addEventListener('click', () => {
 
-    if(isOpen){
-        searchInput.classList.add("hide")
-    }
-    else{
-        searchInput.classList.remove("hide")
-        searchInput.placeholder = getHint()
-    }
-    isOpen = !isOpen;
+    searchInput.classList.toggle("hide")
+    searchInput.placeholder = getHint()
 });
 
-settingsButton.addEventListener('click', () =>{
-    isDark = !isDark
-    changeTheme(isDark)
+
+const settings = document.getElementById("settings")
+
+settingsButton.addEventListener('click', function() {
+    settings.classList.toggle('hide');
+});
+
+
+lightButton.addEventListener('click', () =>{
+    changeTheme(false)
 })
+
+darkButton.addEventListener('click', () => {
+    changeTheme(true)
+})
+
+defaultButton.addEventListener('click', () => {
+    changeTheme(false)
+})
+
+
+
 
 
 
