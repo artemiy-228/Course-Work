@@ -74,14 +74,14 @@ const changeTheme = (isDark) => {
     if (isDark) {
         document.documentElement.style.setProperty('--primary-bg-color', '#131A20');
         document.documentElement.style.setProperty('--open-windows-color', '#252B32');
-        document.documentElement.style.setProperty('--input-text-color', '#A8AAAD');
+        document.documentElement.style.setProperty('--text-color', '#A8AAAD');
         lightButton.style.border = null;
         darkButton.style.border = "2px solid #5C85D6";
 
     } else {
         document.documentElement.style.setProperty('--open-windows-color', '#ECE5DF');
         document.documentElement.style.setProperty('--primary-bg-color', '#DAD4CD');
-        document.documentElement.style.setProperty('--input-text-color', '#1F1E1D');
+        document.documentElement.style.setProperty('--text-color', '#1F1E1D');
         darkButton.style.border = null;
         lightButton.style.border = "2px solid #5C85D6";
     }

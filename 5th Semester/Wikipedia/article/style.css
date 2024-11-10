@@ -18,6 +18,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: var(--text-color);
 }
 
 body {
@@ -53,11 +54,6 @@ header > * {
 }
 
 
-.article-body {
-    display: flex;
-    flex: 1;
-}
-
 
 .logo-div {
     display: flex;
@@ -79,7 +75,6 @@ header > * {
     background-color: var(--open-windows-color);
     box-shadow: 0 0 5px var(--shadow-color);
     border: none;
-    color: var(--text-color);
     font-size: 16px;
     outline: none;
 }
@@ -145,7 +140,6 @@ header > * {
 .settings-dropdown-menu {
     gap: 20px;
     background-color: var(--open-windows-color);
-    color: var(--text-color);
     padding: 24px 32px;
     border-radius: 10px 10px 0 0;
     display: flex;
@@ -186,7 +180,7 @@ header > * {
 
 #darkButton {
     background-color: #131A21;
-    color: var(--text-color);
+    color: #A8AAADFF;
 }
 
 
@@ -225,7 +219,6 @@ header > * {
     max-height: 400px;
     padding: 16px 32px;
     background-color: var(--open-windows-color);
-    color: var(--text-color);
     border-radius: 10px;
     gap: 10px;
 }
@@ -242,8 +235,6 @@ header > * {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    color: var(--text-color);
-
 }
 
 .line{
@@ -259,7 +250,6 @@ header > * {
     border: none;
     border-radius: 8px;
     background-color: var(--open-windows-color);
-    color: var(--text-color);
     cursor: pointer;
     transition: background-color 0.3s ease, border 0.3s ease;
     font-size: 16px;
@@ -275,4 +265,66 @@ header > * {
     font-size: 18px;
 }
 
+.article-body{
+    padding: 48px 0;
+    display: flex;
+    flex: 1;
+}
 
+.text-spot{
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 4;
+}
+
+.card-spot{
+    display: flex;
+    flex: 1;
+}
+
+.text-spot > h2{
+    align-self: center;
+}
+
+.text-block{
+
+}
+
+.card {
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card > .text-center{
+    text-align: center;
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card > img {
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.fill {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 81, 255, 0.3);
+}
+
+.info {
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.flag-icon {
+    width: 2em;
+    height: auto;
+    vertical-align: middle;
+}

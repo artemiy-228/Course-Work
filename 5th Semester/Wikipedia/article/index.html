@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -7,94 +8,111 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<header>
-		<div class="logo-div">
-			<button id="menuButton" class="action-button">
-				<i class="fa fa-bars"></i>
-			</button>
-			<aside id="menu" class="hide">
-				<div class="dropdown-menu">
-					<img src="artemywiki.png" alt="Logo">
-					<h3>ArtemyWiki</h3>
-					<div class="articles-info">
-						<p>Articles: 0</p>
-						<p>Users: 0</p>
-					</div>
-					<div class="line"></div>
-					<p>Navigation</p>
-					<div class="main-page-button">
-						<button class="nav-button" id="mainPageButton">
-							<i class="fa fa-home"></i> Main Page
-						</button>
-						<button class="nav-button" id="randomArticleButton">
-							<i class="fa fa-random"></i> Random Article
-						</button>
-						<button class="nav-button" id="githubButton">
-							<i class="fa fa-github"></i> GitHub
-						</button>
-					</div>
-					<div class="line"></div>
-					<p>Creator: Artemy Sychev ET-312</p>
+<header>
+	<div class="logo-div">
+		<button id="menuButton" class="action-button">
+			<i class="fa fa-bars"></i>
+		</button>
+		<aside id="menu" class="hide">
+			<div class="dropdown-menu">
+				<img src="artemywiki.png" alt="Logo">
+				<h3>ArtemyWiki</h3>
+				<div class="articles-info">
+					<p>Articles: 0</p>
+					<p>Users: 0</p>
 				</div>
-			</aside>
-			<h2 class="logo-text">ArtemyWiki</h2>
-		</div>
-		<div id="inputField" class="input-field">
-			<input id="searchInput" type="text" class="search-input hide">
-			<button id="searchButton" class="action-button">
-				<i class="fa fa-search"></i>
-			</button>
-			<button id="settingsButton" class="action-button">
-				<i class="fa fa-cog"></i>
-			</button>
-			<aside id="settings" class="hide">
-				<div class="dropdown-settings">
-					<div class="settings-dropdown-menu">
-						<h3>Preferences</h3>
-						<div class="subsettings">
-							<h4>Theme</h4>
-							<div class="settings-buttons">
-								<button id="lightButton">
-									Light
-								</button>
-								<button id="darkButton">
-									Dark
-								</button>
-							</div>
-						</div>
-						<div class="subsettings">
-							<h4>Language</h4>
-							<div class="settings-buttons">
-								<button>
-									English
-								</button>
-								<button>
-									Russian
-								</button>
-							</div>
-						</div>
-
-					</div>
-					<button id="defaultButton">
-						Reset to default
+				<div class="line"></div>
+				<p>Navigation</p>
+				<div class="main-page-button">
+					<button class="nav-button" id="mainPageButton">
+						<i class="fa fa-home"></i> Main Page
+					</button>
+					<button class="nav-button" id="randomArticleButton">
+						<i class="fa fa-random"></i> Random Article
+					</button>
+					<button class="nav-button" id="githubButton">
+						<i class="fa fa-github"></i> GitHub
 					</button>
 				</div>
-			</aside>
-			<button id="profileButton" class="action-button">
-				<i class="fa fa-user"></i>
-			</button>
-		</div>
-	</header>
-	<div class="article-body">
-		<div class="text-card">
-		</div>
-		<div class="info-card">
-
+				<div class="line"></div>
+				<p>Creator: Artemy Sychev ET-312</p>
+			</div>
+		</aside>
+		<h2 class="logo-text">ArtemyWiki</h2>
+	</div>
+	<div id="inputField" class="input-field">
+		<input id="searchInput" type="text" class="search-input hide">
+		<button id="searchButton" class="action-button">
+			<i class="fa fa-search"></i>
+		</button>
+		<button id="settingsButton" class="action-button">
+			<i class="fa fa-cog"></i>
+		</button>
+		<aside id="settings" class="hide">
+			<div class="dropdown-settings">
+				<div class="settings-dropdown-menu">
+					<h3>Preferences</h3>
+					<div class="subsettings">
+						<h4>Theme</h4>
+						<div class="settings-buttons">
+							<button id="lightButton">
+								Light
+							</button>
+							<button id="darkButton">
+								Dark
+							</button>
+						</div>
+					</div>
+					<div class="subsettings">
+						<h4>Language</h4>
+						<div class="settings-buttons">
+							<button>
+								English
+							</button>
+							<button>
+								Russian
+							</button>
+						</div>
+					</div>
+				</div>
+				<button id="defaultButton">
+					Reset to default
+				</button>
+			</div>
+		</aside>
+		<button id="profileButton" class="action-button">
+			<i class="fa fa-user"></i>
+		</button>
+	</div>
+</header>
+<div class="article-body">
+	<div class="text-spot">
+		<h2 id="articleName">Artemy Sychev</h2>
+		<div class="text-block">
+			<h3>Biography</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad architecto minus nulla placeat quia
+				quibusdam soluta temporibus velit vitae. A cupiditate delectus incidunt, minus porro quod rem? Iure,
+				obcaecati. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores debitis deserunt
+				doloremque eveniet, explicabo facilis illo ipsa libero minus numquam officia porro quo, quod ullam unde
+				vero vitae voluptate.</p>
 		</div>
 	</div>
+	<div class="card-spot">
+		<div class="card">
+			<div class="card-body">
+				<p class="text-center fill"><strong>Sychev Artemy Daniilovich</strong></p>
+				<img src="ayanami.jpg" alt="Ayanami Rey"/>
+				<div class="info">
+					<p><strong>Date of Birth:</strong> 23.11.2004</p>
+					<p><strong>Origin:</strong> <img src="usa_flag.png" alt="USA Flag" class="flag-icon"> USA, California, San Diego</p>
+					<p><strong>Current status:</strong> Student</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-	<script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
