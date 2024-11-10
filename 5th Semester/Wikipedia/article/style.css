@@ -293,11 +293,13 @@ header > * {
 }
 
 .card {
-    width: 60%;
+    padding: 8px 16px;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border: 1px solid ;
 }
 
 .card > .text-center{
@@ -308,8 +310,9 @@ header > * {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.card > img {
+.card  img {
     width: 60%;
+    align-self: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -324,7 +327,5 @@ header > * {
 }
 
 .flag-icon {
-    width: 2em;
-    height: auto;
-    vertical-align: middle;
+    width: 20px;
 }
