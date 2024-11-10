@@ -106,6 +106,14 @@ header > * {
     color: var(--button-hover-color);
 }
 
+#searchButton i{
+    transition: transform 0.3s ease;
+}
+
+#searchButton:hover i {
+    transform: rotate(60deg);
+}
+
 
 .input-field {
     display: flex;
@@ -118,14 +126,14 @@ header > * {
     margin: 8px 0;
 }
 
-.dropdown-menu {
+.dropdown-settings {
     display: flex;
     flex-direction: column;
     min-width: 300px;
     max-width: 300px;
 }
 
-.dropdown-menu > button {
+.dropdown-settings > button {
     padding: 8px 16px;
     background-color: #DD3333;
     color: white;
@@ -195,4 +203,76 @@ header > * {
 #settings.hide {
     display: none;
 }
+
+#menu{
+    position: absolute;
+    top: 50px;
+    left: 16px;
+    z-index: 1000;
+}
+
+#menu.hide{
+    display: none;
+}
+
+.dropdown-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+    min-height: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    padding: 16px 32px;
+    background-color: var(--open-windows-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.dropdown-menu > img{
+    width: 100px;
+}
+
+.dropdown-menu > h3{
+    color: var(--primary-text-color);
+}
+
+.articles-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: var(--text-color);
+
+}
+
+.line{
+    width: 100%;
+    border-bottom: 1px solid var(--primary-text-color);
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--open-windows-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    font-size: 16px;
+    gap: 8px;
+}
+
+.nav-button:hover {
+    background-color: var(--button-hover-color);
+    border: 2px solid var(--button-border-color);
+}
+
+.nav-button i {
+    font-size: 18px;
+}
+
 

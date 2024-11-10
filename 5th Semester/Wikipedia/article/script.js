@@ -67,6 +67,7 @@ const settingsButton = document.getElementById("settingsButton")
 const lightButton = document.getElementById("lightButton")
 const darkButton = document.getElementById("darkButton")
 const defaultButton = document.getElementById("defaultButton")
+const menuButton = document.getElementById("menuButton")
 
 
 const changeTheme = (isDark) => {
@@ -118,6 +119,15 @@ darkButton.addEventListener('click', () => {
 
 defaultButton.addEventListener('click', () => {
     changeTheme(false)
+})
+
+
+
+const menu = document.getElementById("menu")
+
+
+menuButton.addEventListener('click', () =>{
+    menu.classList.toggle("hide")
 })
 
 

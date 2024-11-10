@@ -14,6 +14,31 @@
 			<button id="menuButton" class="action-button">
 				<i class="fa fa-bars"></i>
 			</button>
+			<aside id="menu" class="hide">
+				<div class="dropdown-menu">
+					<img src="artemywiki.png" alt="Logo">
+					<h3>ArtemyWiki</h3>
+					<div class="articles-info">
+						<p>Articles: 0</p>
+						<p>Users: 0</p>
+					</div>
+					<div class="line"></div>
+					<p>Navigation</p>
+					<div class="main-page-button">
+						<button class="nav-button" id="mainPageButton">
+							<i class="fa fa-home"></i> Main Page
+						</button>
+						<button class="nav-button" id="randomArticleButton">
+							<i class="fa fa-random"></i> Random Article
+						</button>
+						<button class="nav-button" id="githubButton">
+							<i class="fa fa-github"></i> GitHub
+						</button>
+					</div>
+					<div class="line"></div>
+					<p>Creator: Artemy Sychev ET-312</p>
+				</div>
+			</aside>
 			<h2 class="logo-text">ArtemyWiki</h2>
 		</div>
 		<div id="inputField" class="input-field">
@@ -24,6 +49,39 @@
 			<button id="settingsButton" class="action-button">
 				<i class="fa fa-cog"></i>
 			</button>
+			<aside id="settings" class="hide">
+				<div class="dropdown-settings">
+					<div class="settings-dropdown-menu">
+						<h3>Preferences</h3>
+						<div class="subsettings">
+							<h4>Theme</h4>
+							<div class="settings-buttons">
+								<button id="lightButton">
+									Light
+								</button>
+								<button id="darkButton">
+									Dark
+								</button>
+							</div>
+						</div>
+						<div class="subsettings">
+							<h4>Language</h4>
+							<div class="settings-buttons">
+								<button>
+									English
+								</button>
+								<button>
+									Russian
+								</button>
+							</div>
+						</div>
+
+					</div>
+					<button id="defaultButton">
+						Reset to default
+					</button>
+				</div>
+			</aside>
 			<button id="profileButton" class="action-button">
 				<i class="fa fa-user"></i>
 			</button>
@@ -36,39 +94,7 @@
 
 		</div>
 	</div>
-	<aside id="settings" class="hide">
-		<div class="dropdown-menu">
-			<div class="settings-dropdown-menu">
-				<h3>Preferences</h3>
-				<div class="subsettings">
-					<h4>Theme</h4>
-					<div class="settings-buttons">
-						<button id="lightButton">
-							Light
-						</button>
-						<button id="darkButton">
-							Dark
-						</button>
-					</div>
-				</div>
-				<div class="subsettings">
-					<h4>Language</h4>
-					<div class="settings-buttons">
-						<button>
-							English
-						</button>
-						<button>
-							Russian
-						</button>
-					</div>
-				</div>
 
-			</div>
-			<button id="defaultButton">
-				Reset to default
-			</button>
-		</div>
-	</aside>
 	<script src="script.js"></script>
 </body>
 </html>
