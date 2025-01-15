@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}ArtemyWiki{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="home-header">
+            <h1 data-translate="welcome">Welcome to ArtemyWiki!</h1>
+            <img src="{% static 'images/artemywiki.png' %}" alt="ArtemyWiki">
+        </div>
+        <div class="home-body">
+    {% include 'nav.html' %}
+            <main class="part">
+                <section class="part">
+                    <h2 data-translate="welcome">Welcome</h2>
+                    <p data-translate="searchPlaceholder">This is ArtemyWiki, a personal space for organizing and sharing knowledge. Explore articles,
+                        guides, and projects!</p>
+                </section>
+                <section class="part">
+                    <h2 data-translate="featuredArticles">Featured Articles</h2>
+                    <ul>
+                        <li data-translate="noArticles">How to Use ArtemyWiki</li>
+                        <li data-translate="noArticles">Top Projects of 2024</li>
+                        <li data-translate="noArticles">Introduction to Python Programming</li>
+                    </ul>
+                </section>
+            </main>
+            <aside class="prod-articles-block-part">
+                <section class="prod-articles-block">
+                    <h2 data-translate="popularArticles">Popular Articles</h2>
+                    <ul>
+                        {% for article in popular_articles %}
+                            <li>
+                                <a href="#">
+                                    {{ article.article_title }}
+                                </a>
+                            </li>
+                        {% empty %}
+                            <li data-translate="noArticles">No recent articles available.</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+                <section class="prod-articles-block">
+                    <h2 data-translate="recentArticles">Recent Articles</h2>
+                    <ul>
+                        {% for article in recent_articles %}
+                            <li>
+                                <a href="#">
+                                    {{ article.article_title }}
+                                </a>
+                            </li>
+                        {% empty %}
+                            <li data-translate="noArticles">No recent articles available.</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </div>
+
+{% endblock %}
